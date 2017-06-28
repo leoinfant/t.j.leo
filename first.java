@@ -1,34 +1,17 @@
-public class individual {
-    public static void main(String ar[])throws Exception
-{
-int n1,a,t;
-Scanner sc=new Scanner(System.in);
-n1=sc.nextInt();
-int ar1[]=new int[n1];
-for(int i=0;i<n;i++)
-ar1[i]=sc.nextInt();
-for(int i=0;i<n1;i++)
-{
-for(int j=i+1;j<n1;j++)
-{
-if(ar1[i]>ar1[j])
-{
-t=ar1[i];
-ar1[i]=ar1[j];
-ar1[j]=t;
-}
-}
-}
-for(int i=0;i<n1-1;i++)
-{
-if(ar1[i]==ar1[i+1])
-{
-    i++;
-    continue;
-}
-else
-System.out.println(ar[i]);
-}
+public static Integer[] outputSinglePair(Integer[] numbers){  
+        if(numbers == null)  
+            throw new IllegalArgumentException();  
 
-}
-}
+        Arrays.sort(numbers);  
+        ArrayList<Integer> result = new ArrayList<Integer>();  
+        for(int i = 0; i < numbers.length - 1; ){  
+            if(numbers[i] != numbers[i + 1]){  
+                result.add(numbers[i]);  
+                i++;                
+            }     
+            else  
+                i+=2;  
+            if(i == numbers.length - 1)result.add(numbers[i]);//we hit last element of array which is unpaired
+        }  
+        return result.toArray(new Integer[0]);  
+    }  
