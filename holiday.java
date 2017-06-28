@@ -1,9 +1,9 @@
 public class Holiday {
     public static void main(String[] args) {
 
-       int day=7;
+       int days=7;
       String dayString=["monday","tuesday","wednesday","thrusday","friday","saturday","sunday"];
-        switch (day) {
+        switch (days) {
             case 1:  
                   System.out.println("true");
                      break;
@@ -27,7 +27,7 @@ System.out.println("false");
                      break;
             
           
-            default: dayString = "Invalid day";
+            default: dayString = "enter a valid day";
                      break;
         }
        
