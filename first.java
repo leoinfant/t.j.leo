@@ -1,17 +1,33 @@
-public static Integer[] outputSinglePair(Integer[] numbers){  
-        if(numbers == null)  
-            throw new IllegalArgumentException();  
-
-        Arrays.sort(numbers);  
-        ArrayList<Integer> result = new ArrayList<Integer>();  
-        for(int i = 0; i < numbers.length - 1; ){  
-            if(numbers[i] != numbers[i + 1]){  
-                result.add(numbers[i]);  
-                i++;                
-            }     
-            else  
-                i+=2;  
-            if(i == numbers.length - 1)result.add(numbers[i]);//we hit last element of array which is unpaired
-        }  
-        return result.toArray(new Integer[0]);  
-    }  
+public class Array_First_Repeat 
+{   
+    public static void main(String[] args) 
+    {
+       int arra[] = {2, 7, 3, 7, 1, 2, 3};
+       int duplicate[] = new int[10];
+       int position[] = new int[10];
+       int a,pos=0,element=0;
+ 
+        for (int i = 0; i < arra.length-1; i++)
+        {
+            for (int j = i+1; j < arra.length; j++)
+            {
+                if( (arra[i]==(arra[j])) && (i != j) )
+                {
+                              duplicate[element]=arra[j];                   
+                              element++;
+                }
+            }
+        }
+        
+        
+        
+        
+            System.out.println("The first repeated element in the array is "+duplicate[0]);
+    
+    
+    
+    
+     }
+    
+   
+}
